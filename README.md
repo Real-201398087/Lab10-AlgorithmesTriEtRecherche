@@ -8,7 +8,34 @@ Pour la première partie, nous allons mettre à l'essaie 3 algorithmes de tri :
 - tri par sélection
 - tri par insertion
 
-La deuxième partie sera décrite plus tard.  
+La deuxième partie incluera la recherche et sera décrite pour le prochain cours.  
+
+## Énoncé du laboratoire
+Pour ce laboratoire, nous allons ré-utiliser le sujet du laboratoire 2 soit le fichier .csv des casernes de pompiers.  Nous utiliserons les données de ce fichier pour pratiquer les algos de tri et au prochain cours les algos de recherche.  
+
+Tout d'abord, nous allons "convertir" ce lab en objet.  Il vous faudra donc créer une classe `Caserne` qui représentera une ligne du fichier csv.  Cette classe doit pouvoir contenir toutes les informations du fichier CSV, donc un attribut par colonne.
+
+Ensuite, on devra lire le fichier .csv et créer un objet caserne par ligne que l'on met dans un tableau statique de 68 entrées (soit le nombre de caserne dans le fichier).  Ceci pourra être fait dans le fichier `main.cpp`.  Par la suite, on implémentera le tri selon ces critères :
+- Pour la colonne `numéro caserne`, ce sera un tri par sélection
+- Pour la colonne `rue`, ce sera un tri à bulle
+- Pour la colonne `arrondissement` ou `ville`, ce sera un tri par insertion.  Ici je mentionne *ou* puisque parfois l'arrondissement est vide et parfois la ville est vide, mais jamais les deux en même temps.  Prenons la valeur qui n'est pas vide entre les deux.
+
+Chaque tri aura sa propre fonction dans le fichier main.cpp qui fera la comparaison selon le bon critère.  
+
+Finalement, il nous faudra un menu console pour pouvoir afficher les données triées selon le critère demandé.  Voici un aperçu du menu :
+```
+1. Trier les casernes par numéro (tri par sélection)
+2. Trier les casernes par rue (tri à bulle)
+3. Trier les casernes par arrondissements / ville (tri par insertion)
+4. Quitter
+
+Quel est votre choix ? 1
+
+Résultat triés:
+#02, 10 chemin du Tour-de-L'Isle, Arrondissement Ville-Marie
+#03, 256 rue Young, Arrondissement LE SUD-OUEST
+...
+```
 
 Voici les détails d'implémentation des 3 types de tri.
 
@@ -33,10 +60,10 @@ POUR i DE 0 A n-1  //n étant la size du tableau
 **Pseudo-code**
 ```
 POUR i DE 0 A n-1  //n étant la size du tableau
-    posMin ← i
+    posMin = i
     POUR j DE i+1 A n
         SI tab(j) < tab(posMin)
-            posMin ←  j
+            posMin =  j
     SI i != posMin
         permute (tab(i), tab(posMin))
 ```
@@ -60,13 +87,3 @@ POUR i DE 1 A n		//n étant la size du tableau
     tab(j+1) ← temp
 FIN POUR
 ```
-
-## Énoncé du laboratoire
-Maintenant que nous avons un aperçu du fonctionnement des algorithme de tri, c'est le temps de les programmer.  Pour ce laboratoire, nous allons ré-utiliser le sujet du laboratoire 2 soit le fichier .csv des casernes de pompiers.  Nous utiliserons les données de ce fichier pour pratiquer les algos de tri et au prochain cours les algos de recherche.  
-
-Tout d'abord, nous allons "convertir" ce lab 2 en objet.  Il vous faudra donc créer une classe `Caserne` qui représentera une ligne du fichier csv.  Cette classe doit pouvoir contenir les informations du fichier CSV, donc un attribut par colonne.
-
-Ensuite, on devra lire le fichier .csv, créer un objet caserne par ligne que l'on met dans un tableau statique de 68 entrées (soit le nombre de caserne dans le fichier).  Ceci pourra être fait dans le main().  Par la suite, on implémentera le tri selon ces critères :
-- Pour la colonne `numéro caserne`, ce sera un tri par sélection
-- Pour la colonne `rue`, ce sera un tri à bulle
-- Pour la colonne `arrondissement` ou `ville`, ce sera un tri par insertion.  Ici je mentionne *ou* puisque parfois l'arrondissement est vide et parfois la ville est vide, mais jamais les deux en même temps.  Prenons la valeur qui n'est pas vide entre les deux.
