@@ -4,7 +4,7 @@
 Dans ce laboratoire, nous allons mettre à l'essaie 3 algorithmes de tri : 
 - tri à bulle
 - tri par sélection
-- tri par insertion.
+- tri par insertion
 
 Voici les détails d'implémentation de ces 3 types de tri.
 
@@ -56,3 +56,10 @@ POUR i DE 1 A n		//n étant la size du tableau
     tab(j+1) ← temp
 FIN POUR
 ```
+
+## Énoncé du laboratoire
+Maintenant que nous avons un aperçu du fonctionnement des algorithme de tri, c'est le temps de les programmer.  Pour ce laboratoire, nous allons ré-utiliser le sujet du laboratoire 2 soit le fichier .csv des casernes de pompiers.  Nous utiliserons les données de ce fichier pour pratiquer les algos de tri et au prochain cours les algos de recherche.  
+
+Tout d'abord, nous allons "convertir" ce lab 2 en objet.  Il vous faudra donc créer une classe `Caserne` qui représentera une ligne du fichier csv.  Cette classe doit pouvoir contenir les informations du fichier CSV, donc un attribut par colonne.
+
+Ensuite, on devra lire le fichier .csv, créer un objet caserne par ligne que l'on met dans un tableau statique de 68 entrées (soit le nombre de caserne dans le fichier).   
