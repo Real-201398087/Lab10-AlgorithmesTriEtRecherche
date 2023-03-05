@@ -1,12 +1,16 @@
 # Lab 10 - Algorithmes de Tri
 
 ## Description
-Dans ce laboratoire, nous allons mettre à l'essaie 3 algorithmes de tri : 
+Ce laboratoire sera utilisé pour les algorithmes de tri mais aussi de recherche.  
+
+Pour la première partie, nous allons mettre à l'essaie 3 algorithmes de tri : 
 - tri à bulle
 - tri par sélection
 - tri par insertion
 
-Voici les détails d'implémentation de ces 3 types de tri.
+La deuxième partie sera décrite plus tard.  
+
+Voici les détails d'implémentation des 3 types de tri.
 
 ## Tri à bulle
 - Il consiste à faire remonter le plus petit élément du tableau (comme une bulle d'air remonte à la surface) en comparant les éléments successifs. C'est-à-dire qu'on va comparer le 1er et le 2e élément du tableau, conserver le plus petit et puis les échanger s'ils sont désordonnés les uns par rapport aux autres. On recommence cette opération jusqu'à la fin du tableau.
@@ -62,4 +66,7 @@ Maintenant que nous avons un aperçu du fonctionnement des algorithme de tri, c'
 
 Tout d'abord, nous allons "convertir" ce lab 2 en objet.  Il vous faudra donc créer une classe `Caserne` qui représentera une ligne du fichier csv.  Cette classe doit pouvoir contenir les informations du fichier CSV, donc un attribut par colonne.
 
-Ensuite, on devra lire le fichier .csv, créer un objet caserne par ligne que l'on met dans un tableau statique de 68 entrées (soit le nombre de caserne dans le fichier).   
+Ensuite, on devra lire le fichier .csv, créer un objet caserne par ligne que l'on met dans un tableau statique de 68 entrées (soit le nombre de caserne dans le fichier).  Ceci pourra être fait dans le main().  Par la suite, on implémentera le tri selon ces critères :
+- Pour la colonne `numéro caserne`, ce sera un tri par sélection
+- Pour la colonne `rue`, ce sera un tri à bulle
+- Pour la colonne `arrondissement` ou `ville`, ce sera un tri par insertion.  Ici je mentionne *ou* puisque parfois l'arrondissement est vide et parfois la ville est vide, mais jamais les deux en même temps.  Prenons la valeur qui n'est pas vide entre les deux.
