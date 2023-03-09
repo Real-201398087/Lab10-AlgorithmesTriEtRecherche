@@ -1,4 +1,4 @@
-# Lab 10 - Algorithmes de Tri
+# Lab 10 - Algorithmes de Tri et Recherche
 
 ## Description
 Ce laboratoire sera utilisé pour les algorithmes de tri mais aussi de recherche.  
