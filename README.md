@@ -88,7 +88,12 @@ POUR i DE 1 A n		//n étant la size du tableau
 FIN POUR
 ```
 
+## Recherche linéaire
+Maintenant ajoutons une recheche linéaire dans notre application.  Ajoutez une méthode qui prendra un nom d'arrondissement et/ou de ville en paramètre et sortira toutes les casernes qui correspondent à cette valeur.
+
 ## Recherche dichotomique
+Maintenant ajoutons une recheche dichotomique dans notre application.  Ajoutez une méthode qui prendra un nom de rue en paramètre et sortira toutes les casernes qui correspondent à cette valeur.
+
 **Pseudo-code**
 ```
 i ←  n		//n est la size du tableau
