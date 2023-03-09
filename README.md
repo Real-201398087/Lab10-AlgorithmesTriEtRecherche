@@ -92,7 +92,7 @@ FIN POUR
 Maintenant ajoutons une recheche linéaire dans notre application.  Ajoutez une méthode qui prendra un nom d'arrondissement et/ou de ville en paramètre et sortira toutes les casernes qui correspondent à cette valeur.
 
 ## Recherche dichotomique
-Maintenant ajoutons une recheche dichotomique dans notre application.  Ajoutez une méthode qui prendra un nom de rue en paramètre et sortira toutes les casernes qui correspondent à cette valeur.
+Maintenant ajoutons une recheche dichotomique dans notre application.  Ajoutez une méthode qui prendra un numéro de caserne et trouvera cette caserne dans la liste.
 
 **Pseudo-code**
 ```
