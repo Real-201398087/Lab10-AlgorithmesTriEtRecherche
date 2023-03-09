@@ -87,3 +87,23 @@ POUR i DE 1 A n		//n étant la size du tableau
     tab(j+1) ← temp
 FIN POUR
 ```
+
+## Recherche dichotomique
+**Pseudo-code**
+```
+i ←  n		//n est la size du tableau
+BI ←  0		//Borne inférieure
+BS ←  n-1	//Borne supérieure
+TANT QUE (BI <=BS)
+	milieu ←   (BI + BS) / 2
+	SI recherche = tab(milieu) ALORS
+		i ←  milieu
+		terminer
+	SINON SI tab(milieu) < recherche ALORS 
+		BI ←  milieu + 1
+	SINON 
+		BS ←  milieu - 1
+	FIN SI
+FIN TANT QUE
+retourne i
+```
