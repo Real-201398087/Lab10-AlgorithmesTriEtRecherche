@@ -1,4 +1,4 @@
-# Lab 10 - Algorithmes de Tri
+# Lab 10 - Algorithmes de Tri et Recherche
 
 ## Description
 Ce laboratoire sera utilisé pour les algorithmes de tri mais aussi de recherche.  
@@ -86,4 +86,29 @@ POUR i DE 1 A n		//n étant la size du tableau
     FIN POUR
     tab(j+1) ← temp
 FIN POUR
+```
+
+## Recherche linéaire
+Maintenant ajoutons une recheche linéaire dans notre application.  Ajoutez une méthode qui prendra un nom d'arrondissement et/ou de ville en paramètre et sortira toutes les casernes qui correspondent à cette valeur.
+
+## Recherche dichotomique
+Maintenant ajoutons une recheche dichotomique dans notre application.  Ajoutez une méthode qui prendra un numéro de caserne et trouvera cette caserne dans la liste.
+
+**Pseudo-code**
+```
+i ←  n		//n est la size du tableau
+BI ←  0		//Borne inférieure
+BS ←  n-1	//Borne supérieure
+TANT QUE (BI <=BS)
+	milieu ←   (BI + BS) / 2
+	SI recherche = tab(milieu) ALORS
+		i ←  milieu
+		terminer
+	SINON SI tab(milieu) < recherche ALORS 
+		BI ←  milieu + 1
+	SINON 
+		BS ←  milieu - 1
+	FIN SI
+FIN TANT QUE
+retourne i
 ```
